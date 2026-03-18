@@ -32,11 +32,17 @@ public class Person {
     }
     
     public void setAge(int age){
-        if(this._age > 0) {
+        if(age > 0) {
             this._age = age;
         }
         else {
             System.out.println("Edad inválida...ingresa una edad válida");
         }
-    }    
+    }  
+    
+    public void say(){
+        System.out.println("Los datos son: ");
+        System.out.println("Nombre: " + this._name);
+        System.out.println("Edad: " + this._age);
+    }
 }

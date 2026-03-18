@@ -15,4 +15,24 @@ public class Girl extends Person {
        super(name, age);
        this._timeRelation = timeRelation;
     }
+    
+    public int getTimeRelation(){
+        return this._timeRelation;
+    }
+    
+    public void setTimeRelation(int time){
+        if(time >= 0){
+            this._timeRelation = time;
+        }
+        else {
+            System.out.println("El tiempo de relacion no es válido");
+        }
+    }
+    
+    //mismo metodo del padre pero se comporta diferente con el hijo
+    @Override
+    public void say(){
+        System.out.println("Hola me llamo " + getName());
+        System.out.println("Tengo " + getAge() + " Años");
+    }
 }
